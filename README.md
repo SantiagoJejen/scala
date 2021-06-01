@@ -6,23 +6,23 @@ Escala se compila, generá un bytecode que corre sobre JVM.
 
 ## Instalación 
 Para la instalación necesitamos:
-![]https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/
-![]https://www.scala-lang.org/download/
+!['instalacion'](https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/)
+!['scala-lang'](https://www.scala-lang.org/download/)
 ### JDK 8
 Java developer Kit, en la versión 8 
-![]https://openjdk.java.net/
+!['JDK'](https://openjdk.java.net/)
 ### SBT 
 SBT es el equivalente NPM en javascrip 
-![]https://www.scala-sbt.org/download.html
+!['SBT'](https://www.scala-sbt.org/download.html)
 
 ### Editores 
 #### REPL:en consola
 #### ScalaFidddle: código online 
-![]https://scalafiddle.io/
+!['ScalaFidddle'](https://scalafiddle.io/)
 #### Matals: integración con VSC, Atom, SublimeText
-![]https://scalameta.org/metals/
+!['Matals'](https://scalameta.org/metals/)
 #### IntelliJ IDEA: Editor mas potente de scala
-![](https://www.jetbrains.com/idea/)
+!['IntelliJ'](https://www.jetbrains.com/idea/)
 
 
 ## Tipos de datos 
