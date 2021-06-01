@@ -36,28 +36,28 @@ Algo que puede cambiar en el tiempo, algo inmutable no cambia en el tiempo. La m
 
 ir a la terminar y entrar en el interprete.
 
-´´´
+```
 scala
-´´´
+```
 
 Para declarar una variable, las varibles son mutables.
 
 
-´´´
+```
 var x = 1
 var x: Int = 1 
-´´´
+```
 
 Para declarar un valor, los valores son inmutables. 
 
-´´´
+```
 val y = 1 
 
-´´´
+```
 
 Para escribir definiciones, las definiciones no se pueden mutar.
 
-´´´
+```
 def z = 1
 
-´´´
+```
