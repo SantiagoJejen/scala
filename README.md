@@ -7,8 +7,8 @@ Escala se compila, generá un bytecode que corre sobre JVM.
 ## Instalación 
 Para la instalación necesitamos:
 
-- [instalacion]:https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/
-- [scala-lang]:https://www.scala-lang.org/download/
+- [instalacion]: https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/
+- [scala-lang]: https://www.scala-lang.org/download/
 ### JDK 8
 Java developer Kit, en la versión 8
 
