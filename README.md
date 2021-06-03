@@ -52,12 +52,57 @@ Para declarar un valor, los valores son inmutables.
 
 ```
 val y = 1 
-
 ```
 
 Para escribir definiciones, las definiciones no se pueden mutar.
 
 ```
 def z = 1
+```
+
+## Expresiones
+Las expresiones son el lenguaje básico de programación en Escala, Escala es un lenjuaje orientado a expresiones.
+Los bloques de código siempre retonar un valor 
 
 ```
+def x = (3)
+def x = 3
+def x = {3}
+``` 
+
+```
+def z = {1; 1+2}
+```
+El parentesis indica que solo puede haber una expresión
+
+```
+def z = (1; 1+2)
+```
+
+```
+if (x != 3 ) "No es tres" else "es tres
+```
+
+```
+if (x != 3 ) "No es tres" 
+>> Any = ()
+```
+## Funciones 
+Una función tiene un dominio y un rango f: D -> R.
+Una función de orden superior, es tratar a la función como un valor mas.
+
+- Funciones anónimas 
+- Funciones como objetos 
+- Funciones como métodos
+
+```
+def f(x: Int) = x * x
+f(2)
+```
+
+*Funciones anónimas*
+ ```
+ (x: Int) => x*x
+ val a = (x: Int) => x*x
+ a(a)
+ ``` 
