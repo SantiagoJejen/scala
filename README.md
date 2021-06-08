@@ -7,8 +7,8 @@ Escala se compila, generá un bytecode que corre sobre JVM.
 ## Instalación 
 Para la instalación necesitamos:
 
-- [instalacion] (https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/)
-- [scala-lang] (https://www.scala-lang.org/download/)
+- [instalacion](https://platzi.com/clases/1793-scala/26009-instalacion-de-las-herramientas/)
+- [scala-lang](https://www.scala-lang.org/download/)
 ### JDK 8
 Java developer Kit, en la versión 8
 
@@ -44,19 +44,33 @@ Para declarar una variable, las varibles son mutables.
 
 ```
 var x = 1
+> var x: Int = 1
 var x: Int = 1 
+> var x: Int = 1
 ```
 
 Para declarar un valor, los valores son inmutables. 
 
 ```
 val y = 1 
+> val y: Int = 1
+```
+```
+scala> y=9
+        ^
+       error: reassignment to val
 ```
 
 Para escribir definiciones, las definiciones no se pueden mutar.
 
 ```
 def z = 1
+> def z: Int
+```
+```
+scala> z =2
+       ^
+       error: value z_= is not a member of 
 ```
 
 ## Expresiones
@@ -79,12 +93,13 @@ def z = (1; 1+2)
 ```
 
 ```
-if (x != 3 ) "No es tres" else "es tres
+if(x != 3 )"No es tres" else "es tres"
+> val res2: String = es tres
 ```
 
 ```
 if (x != 3 ) "No es tres" 
->> Any = ()
+> val res3: Any = ()
 ```
 ## Funciones 
 Una función tiene un dominio y un rango f: D -> R.
@@ -102,6 +117,54 @@ f(2)
 *Funciones anónimas*
  ```
  (x: Int) => x*x
+ > val res8: Int => Int = $Lambda$1069/13233472@394880
+```
+Las funciones anónimas se puede guardar en un valor para tener las disponibles
+```
  val a = (x: Int) => x*x
+ > val a: Int => Int = $Lambda$1070/24017028@e4aad3
  a(a)
  ``` 
+*Funciones como objetos*
+ ```
+ scala> f.apply(8)
+       ^
+       error: missing argument list for method f
+       Unapplied methods are only converted to functions when a function type is expected.
+       You can make this conversion explicit by writing `f _` or `f(_)` instead of `f`.
+ ```
+ Lo anterior falla por que las funciones no son objetos.
+ ```
+ scala> a.apply(4)
+ val res13: Int = 16
+ ```
+ Lo anterior no falló porque a si es un objeto. Pero se pueden convertir las funciones en objetos, usando:
+ ```
+ scala> val c = f _
+ val c: Int => Int = $Lambda$1176/21561793@1a3ffe6
+ ```
+
+ **_** Se usa como comodín.  
+*Funciones de orden superior*
+ Las funciones pueden recivir funciones como entrada
+ ```
+ scala> def g(z: Int => Int) = z(4)
+ def g(z: Int => Int): Int
+ ```
+
+ ```
+ def s(x: Int => Int)(y: Int) = x(y)
+ ```
+
+*Funciones como métodos*
+ ```
+ object Util {
+     def metodo(x: Int) = x+x
+     val a = metodo _
+ }
+ ```
+ Funcion que genere una función 
+
+ def sGreater(int1: Int)={
+        (int2: Int) => int2 > int1
+ }
